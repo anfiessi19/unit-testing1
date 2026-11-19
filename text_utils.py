@@ -7,13 +7,11 @@ def analyze_text(text: str) -> dict:
     clean_words = [word.lower() for word in original_words if word]
 
     word_count = len(clean_words)
-
-
     unique_words = len(set(clean_words))
 
     longest_word = max(
-    (word for word in original_words if word),
-    key=len
+        (word for word in original_words if word),
+        key=len
     )
 
     average_word_length = round(
@@ -26,7 +24,9 @@ def analyze_text(text: str) -> dict:
         if char.isalpha()
     ]
 
-    most_common_letter = max(set(letters), key=letters.count) if letters else None
+    most_common_letter = (
+        max(set(letters), key=letters.count) if letters else None
+    )
 
     return {
         "word_count": word_count,
