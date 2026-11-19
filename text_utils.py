@@ -17,7 +17,7 @@ def analyze_text(text: str) -> dict:
     )
 
     average_word_length = round(
-        sum(len(word) for word in clean_words) / word_count, 4
+        sum(len(word) for word in clean_words) / word_count, 6
     )
 
     letters = [
