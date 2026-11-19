@@ -1,6 +1,6 @@
 import pytest
 
-from text_analyzer import analyze_text
+from text_utils import analyze_text
 
 
 def test_returns_all_expected_keys():
